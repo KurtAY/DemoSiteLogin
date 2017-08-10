@@ -32,10 +32,10 @@ public class Tester {
 	public void before() {
 		report = new ExtentReports();
         ExtentHtmlReporter extentHtmlReporter = new ExtentHtmlReporter(reportFilePath);
-        extentHtmlReporter.config().setReportName("Blah");
-        extentHtmlReporter.config().setDocumentTitle("Blah Blah");
+        extentHtmlReporter.config().setReportName("Login Report");
+        extentHtmlReporter.config().setDocumentTitle("Statistics");
         report.attachReporter(extentHtmlReporter);
-        test = report.createTest("TestName");
+        test = report.createTest("Login Test");
 		
 		webDriver = new ChromeDriver();
 		addUserPage = PageFactory.initElements(webDriver, AddUserPage.class);
